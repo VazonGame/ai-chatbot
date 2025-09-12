@@ -1,0 +1,96 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #111;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  pointer-events: none;
+}
+
+.instructions {
+  pointer-events: none;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0));
+  padding: 8px 12px;
+  font-size: 14px;
+  user-select: none;
+}
+
+#hotbar {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 6px;
+  pointer-events: auto;
+  backdrop-filter: blur(6px);
+}
+
+#hotbar .slot {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.8);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#hotbar .slot.selected {
+  outline: 2px solid #2563eb;
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.swatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.2);
+  display: inline-block;
+}
+
+.swatch.grass { background: #7cc75b; }
+.swatch.dirt { background: #8b5a2b; }
+.swatch.stone { background: #888c8d; }
+
+#toast {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  pointer-events: none;
+}
+
+#toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+canvas {
+  display: block;
+}
+

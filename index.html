@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ماینکرفت ساده - Voxel Builder</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="overlay" aria-live="polite" aria-atomic="true">
+      <div class="instructions">
+        چپ: حذف • راست: قرار دادن • ۱-۳: انتخاب بلوک • S: ذخیره • L: بارگذاری • R: بازنشانی
+      </div>
+      <div id="hotbar" role="toolbar" aria-label="نوع بلوک">
+        <button class="slot selected" data-type="grass" aria-pressed="true"><span class="swatch grass"></span><span class="num">۱</span></button>
+        <button class="slot" data-type="dirt" aria-pressed="false"><span class="swatch dirt"></span><span class="num">۲</span></button>
+        <button class="slot" data-type="stone" aria-pressed="false"><span class="swatch stone"></span><span class="num">۳</span></button>
+      </div>
+      <div id="toast" role="status" aria-live="polite"></div>
+    </div>
+    <noscript>برای اجرای بازی نیاز است جاوااسکریپت فعال باشد.</noscript>
+    <script type="module" src="./main.js"></script>
+  </body>
+  </html>
+
