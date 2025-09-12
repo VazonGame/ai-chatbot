@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ماین‌کرفت ساده با Three.js</title>
+    <link rel="stylesheet" href="/workspace/styles.css" />
+  </head>
+  <body>
+    <div id="overlay" class="overlay">
+      <div class="menu">
+        <h1>ماین‌کرفت ساده</h1>
+        <p>برای شروع روی دکمه زیر کلیک کنید و سپس روی صفحه کلیک کنید.</p>
+        <button id="startBtn">شروع بازی</button>
+        <ul class="help">
+          <li>W A S D: حرکت</li>
+          <li>Space: پرش</li>
+          <li>Shift: دویدن</li>
+          <li>Q / E: بالا / پایین رفتن (پرواز)</li>
+          <li>ماوس: نگاه کردن</li>
+          <li>کلیک چپ: شکستن بلوک</li>
+          <li>کلیک راست: قرار دادن بلوک</li>
+          <li>1-4: انتخاب نوع بلوک</li>
+          <li>Escape: خروج از قفل ماوس</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="hud" class="hud hidden">
+      <div class="crosshair">+</div>
+      <div class="status">
+        <span>بلوک: <b id="blockName">سنگ</b></span>
+      </div>
+    </div>
+
+    <canvas id="game"></canvas>
+
+    <script type="module" src="/workspace/main.js"></script>
+  </body>
+  </html>
+
